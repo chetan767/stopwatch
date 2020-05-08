@@ -10,8 +10,8 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="170dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="176dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/time"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,33 +59,47 @@
             android:text="Start">
 
         </Button>
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="75dp"
+        android:layout_marginBottom="82dp"
+        android:breakStrategy="simple"
         android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/stop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        android:breakStrategy="simple"
-        android:singleLine="true"
-        android:maxLines="1">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
     </TextView>
 
     <Button
         android:id="@+id/stop"
         android:layout_width="90dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="266dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="83dp"
         android:text="Stop"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/resume"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time" />
+
+    <Button
+        android:id="@+id/resume"
+        android:layout_width="90dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="134dp"
+        android:text="Resume"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stop" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
